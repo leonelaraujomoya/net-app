@@ -1,0 +1,90 @@
+/* Estilos Barra de Navegacion */
+
+.miNavbar {
+    height: 70px;
+}
+
+.contenidoNavbar {
+    display: flex !important;
+    justify-content: flex-start !important; 
+    /*width: 200px;*/
+}
+
+.areaBrand {
+    display: flex;
+    align-items: center;
+}
+
+.imag {
+    width: 60px;
+    height: 60px;   
+}
+
+.imag > img {
+    width: 60px;
+    height: 60px;
+}
+
+.misEnlaces {
+    display: flex;
+    justify-content: flex-start; 
+    margin-left: 100px;
+    font-size: 22px;
+}
+
+.textoDropdown {
+    color: white;
+}
+
+.textoDropdown:hover {
+    color: white;
+}
+
+.textoDropdown:focus {
+    color: white;
+}
+
+.margenDerecho {
+    margin-right: 150px !important;
+}
+
+.areaBusqueda {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+}
+
+.inputBusqueda {
+    height: 40px;
+}
+
+.spanBusqueda {
+    color: white;
+    font-size: 22px;
+}
+
+.areaUsuario {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    margin-left: 190px;
+}
+
+.usuarioDropdown {
+    color: #C4E1E3;
+}
+
+.usuarioDropdown:hover {
+    color: #C4E1E3;
+}
+
+.usuarioDropdown:focus {
+    color: #C4E1E3;
+}
+
+.spanUsuario {
+    font-size: 30px;
+    margin-right: 10px;
+}

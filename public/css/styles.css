@@ -1,0 +1,24 @@
+.backgroundImage {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Estilos login */
+
+.imgLogin {
+    display: flex;
+    justify-content: center;
+}
+
+.enlaceRegistrarse {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.enlaceRegistrarse > a {
+    font-size: 18px;
+    color: #505050 !important;
+    text-decoration: none;
+}
