@@ -27,11 +27,10 @@
             window._asset = '{{ asset('images') }}';
         </script>
     </head>
-    <body class="font-sans antialiased bg-light">
-        <img class="backgroundImage" src="{{ asset('images/fondo_net-app2.jpg') }}">
+    <body class="font-sans antialiased colorFondo">
         <div id="app">
 
         </div>
-        
+        &nbsp;    
     </body>
 </html>

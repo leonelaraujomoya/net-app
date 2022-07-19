@@ -1,7 +1,7 @@
-.backgroundImage {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+.colorFondo {
+    background-image: url("../images/fondo_net-app2.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: repeat-y;
 }
 
 /* Estilos login */

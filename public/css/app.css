@@ -2,12 +2,14 @@
 
 .miNavbar {
     height: 70px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .contenidoNavbar {
     display: flex !important;
     justify-content: flex-start !important; 
-    /*width: 200px;*/
 }
 
 .areaBrand {
@@ -87,4 +89,172 @@
 .spanUsuario {
     font-size: 30px;
     margin-right: 10px;
+}
+
+/* Estilos Contenidos */
+
+.areaContenido {
+    margin-top: 25px;
+    width: 96%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* estilos Home */
+
+.areaHome {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+.areaHome > h3 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #194F16;
+}
+
+.areaHome > p {
+    margin-top: 50px;
+    font-size: 30px;
+    color:#3A453A;
+}
+
+/* Estilos Resultados busqueda de videos */
+
+.resultadoVideos >li {
+    list-style-type: none;
+}
+
+.areaResult {
+    padding-top: 10px;
+    background-color: #D8D7D7;
+    padding-right: 30px;
+}
+
+.tituloVideosResult { /* solo para Results.vue */
+    font-size: 20px;
+    color: #05054E;
+    font-weight: bold;
+}
+
+.textoPublicadoResult { /* solo para Results.vue */
+    color: #33333D;
+}
+
+.tituloResultados {
+    text-align: center;
+    color: red;
+}
+
+.linkFiltros {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 20px;
+    color: #212158;
+    margin-left: 10px;
+}
+
+.linkFiltros > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linkFiltros:hover {
+    cursor: pointer;
+}
+
+.spanSearchesOpciones {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.linea {
+    margin-top: -2px;
+}
+
+.opcionesFiltro {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opcionesFiltro > p {
+    color: #385e36;
+}
+
+.tituloOpcionFiltro {
+    font-weight: bold;
+}
+
+.lineas {
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.liopcionesFiltro {
+    list-style-type: none;
+}
+
+.liopcionesFiltro > p:hover {
+    cursor: pointer;
+    background-color: #636366;
+    color: white;
+}
+
+.ulOpciones {
+    padding-left: 0;
+}
+
+.ulOpciones > li {
+    height: 28px;
+}
+
+.videosEncontrados {
+    padding-left: 60px;
+}
+
+.marcoVideo {
+    width: 364px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding-top: 8px;
+    margin-right: 10px;
+}
+
+.tituloSearchesVideo {
+    margin-top: 4px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #a0071c;
+}
+
+.fechaSearchesVideo {
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.descripSearchesVideo {
+    line-height: 18px;
+}
+
+.areaPaginacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.pagActual {
+    color: #1a1aa0;
+    font-weight: bold;
+    margin-top: 10px;
 }

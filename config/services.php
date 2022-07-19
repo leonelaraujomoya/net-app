@@ -30,4 +30,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'youtube' => [
+        'api_key' => "AIzaSyDZREqQS6l581xQE32u1t9iZvlW7YuEHio",
+        'search_endpoint' => "https://www.googleapis.com/youtube/v3/search"
+        //'api_key' => env('API_KEY'),
+        //'search_endpoint' => env('SEARCH_ENDPOINT')
+    ]
+
 ];
