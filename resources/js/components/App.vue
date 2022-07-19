@@ -55,7 +55,7 @@
                             <input id="TextBusqueda" class="form-control me-2 inputBusqueda" type="text" v-model="keywords" >
                             <router-link exact-active-class="active" class="btn btn-success" :to="{ name: 'searches', params: { details: JSON.stringify( { category: 'Consulta', keywords: keywords } ) } }">
                                 <span class="fa-solid fa-search spanBusqueda"></span>
-                            </router-link>
+                            </router-link> 
                         </form>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
 
 <script> 
     let user = document.head.querySelector('meta[name="user"]');
-    
+
     export default {
         data(){
             return {
@@ -93,6 +93,7 @@
             }
         },
         mounted(){
+
             this.$router.push({name: "home"});
         },
         methods: {

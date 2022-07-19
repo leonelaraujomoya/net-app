@@ -71,15 +71,22 @@
                         </ul>
                     </div>
                 </div>
-                <hr class="linea" v-if="filtro" />
+                <hr class="linea" v-if="filtro" /> 
+                
+                <h5 v-if="noexisten" class="videosNoEncontrados">No se encontraros videos relacionados"</h5>
+
                 <div class="row videosEncontrados">
                     <div class="col-4 marcoVideo" v-for="miVideo in listaVideos" v-bind:key="miVideo.id.videoId">
-                        <div>
-                            <img v-bind:src="miVideo.snippet.thumbnails.medium.url" alt="" class="img-fluid">
-                        </div>
-                        <p class="tituloSearchesVideo">{{ miVideo.snippet.title }}</p>
-                        <p class="fechaSearchesVideo">Publicado el {{ miVideo.snippet.publishTime.substring(8, 10) + "-" + miVideo.snippet.publishTime.substring(5, 7) + "-" + miVideo.snippet.publishTime.substring(0, 4) }}</p>
-                        <p class="descripSearchesVideo">{{ miVideo.snippet.description }}</p>
+                        <router-link exact-active-class="active" :to="{ name: 'viewvideo', params: { video_details: JSON.stringify( { idvideo: miVideo.id.videoId, titulovideo: miVideo.snippet.title, publicado: miVideo.snippet.publishTime, descripcion: miVideo.snippet.description, keywords: palabrasClaves } ) } }">
+                            <div>
+                                <div>
+                                    <img v-bind:src="miVideo.snippet.thumbnails.medium.url" alt="" class="img-fluid">
+                                </div>
+                                <p class="tituloSearchesVideo">{{ miVideo.snippet.title }}</p>
+                                <p class="fechaSearchesVideo">Publicado el {{ miVideo.snippet.publishTime.substring(8, 10) + "-" + miVideo.snippet.publishTime.substring(5, 7) + "-" + miVideo.snippet.publishTime.substring(0, 4) }}</p>
+                                <p class="descripSearchesVideo">{{ miVideo.snippet.description }}</p>
+                            </div>
+                        </router-link>
                     </div>
                 </div>
                 <hr class="linea" />
@@ -113,6 +120,7 @@
                 categoria: "",
                 palabrasClaves: "",
                 listaVideos: [],
+                noexisten: true,
                 nPagina: 1,
                 siguiente: "",
                 anterior: "",
@@ -140,7 +148,7 @@
             this.updateDetails();
         },
         mounted(){
-            this.getListaVideos();
+             this.getListaVideos();
         },
         watch: {
             details(){
@@ -278,6 +286,11 @@
                 await this.axios.post('/api/videos', opcionBusqueda)
                     .then((result) => {
                         this.listaVideos = result.data.items;
+                        if(this.listaVideos !== []){
+                            this.noexisten = false;
+                        }else{
+                            this.noexisten = true;
+                        }
                         if (typeof result.data.nextPageToken === "string") {
                             this.siguiente = result.data.nextPageToken;
                         }else{

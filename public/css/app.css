@@ -135,16 +135,6 @@
     padding-right: 30px;
 }
 
-.tituloVideosResult { /* solo para Results.vue */
-    font-size: 20px;
-    color: #05054E;
-    font-weight: bold;
-}
-
-.textoPublicadoResult { /* solo para Results.vue */
-    color: #33333D;
-}
-
 .tituloResultados {
     text-align: center;
     color: red;
@@ -257,4 +247,47 @@
     color: #1a1aa0;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.videosNoEncontrados {
+    margin-top: 120px;
+    text-align: center;
+    color: rgb(114, 5, 5);
+    font-size: 40px;
+}
+
+/* Estilos Viewvideo */
+
+.marcoViewvideo {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.areaInformacionVideo {
+    margin-top: 10px;
+}
+
+.tituloSingleVideo {
+    font-size: 22px;
+    color: #18184b;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.fechaPublicacion {
+    font-weight: bold;
+}
+
+.descripcionVideo {
+    color: #042b02;
+}
+
+.videosRecomendados {
+    font-size: 30px;
+    text-align: center;
+    color: red;
 }

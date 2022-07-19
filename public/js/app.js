@@ -25382,6 +25382,10 @@ var Searches = function Searches() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Searches_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Searches.vue */ "./resources/js/components/Searches.vue"));
 };
 
+var Viewvideo = function Viewvideo() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Viewvideo_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Viewvideo.vue */ "./resources/js/components/Viewvideo.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -25390,6 +25394,11 @@ var routes = [{
   name: 'searches',
   path: '/searches/:details',
   component: Searches,
+  props: true
+}, {
+  name: 'viewvideo',
+  path: '/viewvideo/:video_details',
+  component: Viewvideo,
   props: true
 }];
 
@@ -52585,7 +52594,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Searches_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Searches_vue":1,"resources_js_components_Viewvideo_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

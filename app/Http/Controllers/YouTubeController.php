@@ -64,6 +64,6 @@ class YouTubeController extends Controller
     }
 
     protected function _apiKey(){
-        return "AIzaSyDZREqQS6l581xQE32u1t9iZvlW7YuEHio";
+        return "AIzaSyCikxSgSJeUGjJ_Up19YPIh0LAZqxU0ax4";//"AIzaSyCId2yogfAmuhzEsfIrZsLKRiWAPy0KtkY";
     }
 }
